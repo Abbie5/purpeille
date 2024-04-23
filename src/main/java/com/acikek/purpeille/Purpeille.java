@@ -25,6 +25,8 @@ import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.text.Text;
@@ -54,6 +56,7 @@ public class Purpeille implements ModInitializer {
         if (FabricLoader.getInstance().isModLoaded("roughlyenoughitems")) {
             LOGGER.warn("Purpeille support for REI is limited; use EMI for better integration! https://modrinth.com/mod/emi");
         }
+        Registry.register(Registries.ITEM_GROUP, ITEM_GROUP_REGISTRY_KEY, ITEM_GROUP);
         ModBlocks.register(ModBlocks.BLOCKS);
         ModBlockEntities.register();
         ModItems.register();

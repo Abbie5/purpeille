@@ -9,6 +9,7 @@ import com.acikek.purpeille.block.entity.monolithic.MonolithicPurpur;
 import com.acikek.purpeille.block.entity.rubble.EndRubble;
 import com.acikek.purpeille.item.ModItems;
 import lib.BlockItemProvider;
+import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -131,5 +132,7 @@ public class ModBlocks {
             Registry.register(Registries.BLOCK, id, pair.getValue());
             Registry.register(Registries.ITEM, id, BlockItemProvider.getBlockItem(pair.getValue(), ModItems.defaultSettings()));
         }
+        ItemGroupEvents.modifyEntriesEvent(Purpeille.ITEM_GROUP_REGISTRY_KEY)
+                .register(entries -> blocks.values().forEach(entries::add));
     }
 }
