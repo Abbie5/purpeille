@@ -4,5 +4,6 @@
   "version": 4,
   "book_texture": "patchouli:textures/gui/book_purple.png",
   "dont_generate_book": true,
-  "custom_book_item": "purpeille:ancients_almanac"
+  "custom_book_item": "purpeille:ancients_almanac",
+  "use_resource_pack": true
 }
