@@ -19,7 +19,7 @@
     "obtain_vacuous_core": {
       "trigger": "voidcrafting:void_craft_success",
       "conditions": {
-        "recipe": "purpeille:vacuous_core"
+        "recipe": "purpeille:void_crafting/vacuous_core"
       }
     }
   }

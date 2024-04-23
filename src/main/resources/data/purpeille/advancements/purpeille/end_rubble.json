@@ -19,13 +19,18 @@
     "open_end_rubble": {
       "trigger": "minecraft:item_used_on_block",
       "conditions": {
-        "location": {
-          "block": {
-            "blocks": [
-              "purpeille:end_rubble"
-            ]
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "blocks": [
+                  "purpeille:end_rubble"
+                ]
+              }
+            }
           }
-        }
+        ]
       }
     }
   }

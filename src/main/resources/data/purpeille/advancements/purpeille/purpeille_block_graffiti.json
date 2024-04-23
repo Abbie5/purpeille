@@ -19,18 +19,26 @@
     "graffiti": {
       "trigger": "minecraft:item_used_on_block",
       "conditions": {
-        "location": {
-          "block": {
-            "blocks": [
-              "purpeille:purpeille_block"
-            ]
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "block": {
+                "blocks": [
+                  "purpeille:purpeille_block"
+                ]
+              }
+            }
+          },
+          {
+            "condition": "minecraft:match_tool",
+            "predicate": {
+              "items": [
+                "minecraft:white_dye"
+              ]
+            }
           }
-        },
-        "item": {
-          "items": [
-            "minecraft:white_dye"
-          ]
-        }
+        ]
       }
     }
   }

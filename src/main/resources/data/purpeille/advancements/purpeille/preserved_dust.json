@@ -19,7 +19,7 @@
     "obtain_dust": {
       "trigger": "voidcrafting:void_craft_success",
       "conditions": {
-        "recipe": "purpeille:preserved_dust"
+        "recipe": "purpeille:void_crafting/preserved_dust"
       }
     }
   }
