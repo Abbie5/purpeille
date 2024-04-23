@@ -43,6 +43,9 @@ dependencies {
     modImplementation include("maven.modrinth:voidcrafting:${project.voidcrafting_version}")
     modImplementation include("maven.modrinth:cmods:${project.cmods_version}")
 
+    // required for void crafting
+    modLocalRuntime "maven.modrinth:data-criteria:${project.data_criteria_version}"
+
     // EMI
     modCompileOnly "dev.emi:emi-fabric:${emi_version}:api"
     modLocalRuntime "dev.emi:emi-fabric:${emi_version}"
